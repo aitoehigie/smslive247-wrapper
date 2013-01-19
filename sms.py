@@ -29,8 +29,7 @@ def getacctbalance(cmd="querybalance"):
 
 def sendmessage(message, sendto, sessionid=sessionID, sender=sender):
 	if len(str(sendto)) != 13:
-		return That is not a valid Nigerian GSM number!"
-		break
+		return "That is not a valid Nigerian GSM number!"
 	elif len(str(sendto)) == 13 and str(sendto)[0:6] in str(supported_networks):
 		params = urllib.urlencode(dict(sendto=str(sendto), cmd="sendmsg", sessionid=sessionID, message=message, sender=sender))
 		response = urllib2.urlopen(url, params)
