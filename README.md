@@ -1,4 +1,6 @@
-Simple python wrapper for smslive247.com.
+Simple Python HTTP API wrapper for smslive247.com.
+
+You need to have an account on smslive247.com and create a subaccount to use the API.
 
 #####Restrictions Telcos put in place to combat fraudulent sms messages#######
 1.      Glo Nigeria does not allow the usage of Phone numbers as the Sender's Id, as well as the inclusion of Phone numbers in the body of the message.

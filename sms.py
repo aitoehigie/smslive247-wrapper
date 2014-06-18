@@ -1,5 +1,15 @@
-import urllib
-import urllib2
+#!/usr/bin/env python
+
+#**************************************************************************************
+"""
+description= Python HTTP API wrapper for smslive247.com
+author=Pystar
+author_email=aitoehigie@gmail.com.
+Date=2013
+Revised: 18/06/2014
+"""
+
+import requests
 
 #***********************global-settings*************************
 global url, owneremail, subacct, subacctpwd, sender, number_range, sessionID
@@ -8,8 +18,9 @@ owneremail="your email address registered on smslive247.com"
 subacct="your smslive247.com subacct username"
 subacctpwd="your smslive247.com subacct password"
 sender = "display name of the sender"
-supported_networks = [234708,234802,234808,234812,234705,234805,234811,234807,234815,234703,234706,234803,234806,234810,234813,234816,234809,234817,234818]
-#***************************************************************#
+supported_networks = [234708,234802,234808,234812,234705,234805,234811,234807,234815,234703,234706,234803,234806,234810,
+234813,234816,234809,234817,234818]
+#****************************************************************
 
 def login(owneremail=owneremail, subacct=subacct, subacctpwd=subacctpwd):
 	params = urllib.urlencode(dict(cmd="login", owneremail=owneremail, subacct=subacct, subacctpwd=subacctpwd))
